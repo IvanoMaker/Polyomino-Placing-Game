@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Polyomino Placing Game</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <script src="game.js"></script>
+        <script src="player.js"></script>
+        <script src="render.js"></script>
+
+        <div id="header-container">
+            <div id="controls">
+                <div id="setup-settings">
+                    <div class="setup-group">
+                        <div class="setup-label">You play as</div>
+                        <div class="setup-row">
+                            <label><input type="radio" name="human-color" value="RED" checked> <span class="color-label red">RED</span></label>
+                            <label><input type="radio" name="human-color" value="GREEN"> <span class="color-label green">GREEN</span></label>
+                            <label><input type="radio" name="human-color" value="YELLOW"> <span class="color-label yellow">YELLOW</span></label>
+                            <label><input type="radio" name="human-color" value="BLUE"> <span class="color-label blue">BLUE</span></label>
+                        </div>
+                    </div>
+                    <div class="setup-group">
+                        <div class="setup-label">Bot difficulty</div>
+                        <div class="setup-row">
+                            <label><input type="radio" name="difficulty" value="easy" checked> Easy &mdash; random moves</label>
+                            <label><input type="radio" name="difficulty" value="hard"> Hard &mdash; largest piece first</label>
+                        </div>
+                    </div>
+                </div>
+                <div id="button-row">
+                    <button id="startButton">Start</button>
+                    <button id="resetButton">Reset</button>
+                </div>
+            </div>
+            <div id="title-section">
+                <h2> Polyomino Placing Game</h2>
+                <p id="status-text">Choose your color and the bots' difficulty, then hit Start.</p>
+            </div>
+        </div>
+
+        <div id="tray-container">
+            <div id="piece-list"></div>
+            <div id="tray-actions">
+                <canvas id="preview-canvas" width="96" height="72"></canvas>
+                <div id="tray-buttons">
+                    <button id="rotateButton" disabled>Rotate</button>
+                    <button id="flipButton" disabled>Flip</button>
+                    <button id="passButton" disabled>Pass</button>
+                </div>
+            </div>
+        </div>
+
+        <div id="game-container">
+            <div id="canvas">
+                <canvas></canvas>
+            </div>
+            <div id="log"></div>
+        </div>
+    </body>
+</html>
