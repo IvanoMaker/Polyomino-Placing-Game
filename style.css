@@ -172,7 +172,7 @@ body {
     flex-direction: row;
     align-items: flex-start;
     gap: 16px;
-    margin-top: 16px;
+    margin-top: 8px;
 }
 
 #canvas{
