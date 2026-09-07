@@ -69,10 +69,10 @@ body {
     text-align: center;
 }
 
-.color-label.red    { background: rgb(200, 50, 50); color: #fff; }
-.color-label.green  { background: rgb(50, 160, 70); color: #fff; }
-.color-label.yellow { background: rgb(225, 195, 40); color: #111; }
-.color-label.blue   { background: rgb(50, 90, 200); color: #fff; }
+.color-label.red    { color: rgb(200, 50, 50);}
+.color-label.green  { color: rgb(50, 160, 70);}
+.color-label.yellow { color: rgb(225, 195, 40);}
+.color-label.blue   { color: rgb(50, 90, 200);}
 
 #button-row {
     display: flex;
