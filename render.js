@@ -393,6 +393,16 @@ function resetGame() {
     render();
 }
 
+document.addEventListener('keydown', (evt) => {
+    if (!awaitingHumanInput || !selectedPieceName) return;
+
+    if (evt.key === 'r') {
+        rotateSelected();
+    } else if (evt.key === 'f') {
+        flipSelected();
+    }
+});
+
 document.addEventListener('DOMContentLoaded', () => {
     initCanvas();
     state = new GameState();
